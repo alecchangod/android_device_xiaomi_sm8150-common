@@ -1,7 +1,7 @@
 # Audio
 aaudio.hw_burst_min_usec=2000
 aaudio.mmap_exclusive_policy=2
-aaudio.mmap_policy=2
+aaudio.mmap_policy=1
 af.fast_track_multiplier=1
 audio.deep_buffer.media=true
 audio.offload.min.duration.secs=40
@@ -223,6 +223,8 @@ debug.sf.hw=0
 debug.sf.latch_unsignaled=0
 debug.sf.late.sf.duration=10500000
 debug.sf.late.app.duration=20500000
+debug.sf.predict_hwc_composition_strategy=0
+debug.sf.treat_170m_as_sRGB=1
 debug.sf.use_phase_offsets_as_durations=1
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.msmnile.api30
 ro.hardware.egl=adreno
@@ -260,6 +262,7 @@ persist.vendor.radio.atfwd.start=true
 persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.data_con_rprt=1
 persist.vendor.radio.data_ltd_sys_ind=1
+persist.vendor.radio.dynamic_sar=true
 persist.vendor.radio.enableadvancedscan=true
 persist.vendor.radio.force_ltd_sys_ind=1
 persist.vendor.radio.force_on_dc=true

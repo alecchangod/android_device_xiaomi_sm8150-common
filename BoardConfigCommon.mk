@@ -60,6 +60,7 @@ TARGET_NO_BOOTLOADER := true
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
 USE_DEVICE_SPECIFIC_CAMERA := true
+MALLOC_SVELTE_FOR_LIBC32 := true
 
 # ConfigStore
 TARGET_HAS_HDR_DISPLAY := true
@@ -204,7 +205,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2022-10-01
+VENDOR_SECURITY_PATCH := 2023-01-01
 
 # Sepolicy
 include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk

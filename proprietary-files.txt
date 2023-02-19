@@ -52,9 +52,10 @@ system_ext/etc/permissions/audiosphere.xml
 system_ext/framework/audiosphere.jar
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libmisoundfx.so
+vendor/lib/soundfx/libqcbassboost.so
+vendor/lib/soundfx/libqcreverb.so
+vendor/lib/soundfx/libqcvirt.so
 vendor/lib/soundfx/libshoebox.so
-vendor/lib64/soundfx/libasphere.so
-vendor/lib64/soundfx/libshoebox.so
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
@@ -228,7 +229,7 @@ vendor/lib/vendor.dolby.hardware.dms@2.0.so|aaf98796bfa8b384e2b5e162214ca46f6eca
 vendor/lib64/soundfx/libswdap.so|e996ee1d421b3b2cf74f3f3ed93bff067d83dddb
 vendor/lib64/soundfx/libswgamedap.so|c898fd5b51312c5fafa693ca037423c5bae23101
 vendor/lib64/soundfx/libswvqe.so|08394e1ac285479213604c35cb144147fdac68c0
-vendor/lib64/libdapparamstorage.so|7549aeba2b7041b472ffc1f5fd39a56e4be64a2b 
+vendor/lib64/libdapparamstorage.so|7549aeba2b7041b472ffc1f5fd39a56e4be64a2b
 vendor/lib64/libdeccfg.so|3a63582be7dea50ae10c0543f68e3bce592a3877
 vendor/lib64/libdlbdsservice.so|ccae69075705a71358e363eee973f32d76288696
 vendor/lib64/libstagefright_soft_ac4dec.so|45b4a08175e6b5226b34e7275ce60d4b76033041
@@ -428,21 +429,28 @@ vendor/etc/sap.conf
 vendor/etc/xtwifi.conf
 
 # HotwordEnrollment
--product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
--product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
+-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND.apk
+-product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
+# IMS (system) - from LA.QSSI.13.0.r1-08200-qssi.0
+system_ext/app/ImsRcsService/ImsRcsService.apk|6a5d645d0361447f5c5d31807d646aa38cc31824
+system_ext/app/QtiTelephony/QtiTelephony.apk|9e090c58be926a12149e573ecbdd3a67f611c869
+system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml|7ce9e6ccb5026b0aa87b0eb94a20448e2d4c481c
+system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar|ae7015efe55d17b1caf0da0c2247dac6cfaaa272
+system_ext/lib64/lib-imsvideocodec.so|b66ccec78025517c86ad9fb3cf03d083e62fe6f9
+system_ext/lib64/lib-imsvt.so|1ea25552e520f110e92f6750d0f371d7f2ed69c9
+system_ext/lib64/lib-imsvtextutils.so|1dfb5640cd23a92e7ca55a84118b2966653aebc7
+system_ext/lib64/lib-imsvtutils.so|3ed0180cee3849f63fb7bbbd68a3767693aba2dc
+system_ext/lib64/libdiag_system.so|e8587e587fd052ba03b0e9efad16f4622be37da0
+system_ext/lib64/libimscamera_jni.so|a21333fa8f338acaa4996f74a0e29145f77d5299
+system_ext/lib64/libimsmedia_jni.so|d1b4c03352a9b34f4d26a4fe3a8595f295c7cef8
+system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|ace5e02b6cd79b43a07d84e2d18d6818821a3c48
+system_ext/lib64/vendor.qti.imsrtpservice@3.1.so|e64aa8a21a8db69d2e2ea14929bb20ced99c119d
+system_ext/priv-app/ims/ims.apk|4ebf655d48f9924d7a00e993254044c81c497124
+
 # IMS
-system_ext/lib64/lib-imsvideocodec.so
-system_ext/lib64/lib-imsvt.so
-system_ext/lib64/lib-imsvtextutils.so
-system_ext/lib64/lib-imsvtutils.so
-system_ext/lib64/libdiag_system.so
-system_ext/lib64/libimscamera_jni.so
-system_ext/lib64/libimsmedia_jni.so
-system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
--system_ext/priv-app/ims/ims.apk
 vendor/bin/ims_rtp_daemon
 vendor/bin/imsdatadaemon
 vendor/bin/imsqmidaemon
@@ -533,26 +541,28 @@ vendor/lib64/libqcodec2.so
 etc/permissions/vendor.xiaomi.hardware.misys-V1.0-java-permission.xml
 etc/permissions/vendor.xiaomi.hardware.misys-V2.0-java-permission.xml
 etc/permissions/vendor.xiaomi.hardware.misys.V3_0-permission.xml
-framework/vendor.xiaomi.hardware.misys-V1.0-java.jar
-framework/vendor.xiaomi.hardware.misys-V2.0-java.jar
-framework/vendor.xiaomi.hardware.misys.V3_0.jar
 vendor/bin/hw/vendor.xiaomi.hardware.misys@1.0-service
 vendor/bin/hw/vendor.xiaomi.hardware.misys@2.0-service
 vendor/bin/hw/vendor.xiaomi.hardware.misys@3.0-service
+vendor/bin/hw/vendor.xiaomi.hardware.misys@4.0-service
 vendor/etc/init/vendor.xiaomi.hardware.misys@1.0-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.misys@2.0-service.rc
 vendor/etc/init/vendor.xiaomi.hardware.misys@3.0-service.rc
+vendor/etc/init/vendor.xiaomi.hardware.misys@4.0-service.rc
 -vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys@1.0.xml
 -vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys@2.0.xml
 -vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys@3.0.xml
+-vendor/etc/vintf/manifest/vendor.xiaomi.hardware.misys@4.0.xml
 vendor/lib64/hw/vendor.xiaomi.hardware.misys@1.0-impl.so
 vendor/lib64/hw/vendor.xiaomi.hardware.misys@2.0-impl.so
 vendor/lib64/hw/vendor.xiaomi.hardware.misys@3.0-impl.so
+vendor/lib64/hw/vendor.xiaomi.hardware.misys@4.0-impl.so
 vendor/lib64/libcheckpid.so
 vendor/lib64/liblogwrap_vendor.so
 vendor/lib64/vendor.xiaomi.hardware.misys@1.0.so
 vendor/lib64/vendor.xiaomi.hardware.misys@2.0.so
 vendor/lib64/vendor.xiaomi.hardware.misys@3.0.so
+vendor/lib64/vendor.xiaomi.hardware.misys@4.0.so
 
 # Mlipay
 vendor/bin/mlipayd@1.1
@@ -688,7 +698,6 @@ vendor/lib64/libqmiservices.so
 
 # RIL
 -system_ext/app/DeviceInfo/DeviceInfo.apk
--system_ext/app/QtiTelephony/QtiTelephony.apk
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/qti_libpermissions.xml
@@ -812,9 +821,6 @@ vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
-
-# Telephony (qti-telephony-common)
-system_ext/framework/qti-telephony-common.jar|da703dd00ab06b6136671456cf2ec68b07ed6efa
 
 # Thermal
 vendor/bin/mi_thermald
